@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 const { idProduct } = Astro.params;
 
 const responseProduct = await fetch(
-  `http://localhost:1337/api/products/${idProduct}?populate=*`
+  `https://backend-gtakeout-production.up.railway.app/api/products/${idProduct}?populate=*`
 );
 const dataProduct: ApiResponseProduct = await responseProduct.json();
 const product: any = dataProduct.data;

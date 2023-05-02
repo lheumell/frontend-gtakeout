@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card/Card.astro";
 
 const responseProduct = await fetch(
-  "http://localhost:1337/api/products?populate=*"
+  "https://backend-gtakeout-production.up.railway.app/api/products?populate=*"
 );
 const dataProduct: ApiResponseProduct = await responseProduct.json();
 const products = dataProduct.data;
